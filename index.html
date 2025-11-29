@@ -1,262 +1,280 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hanok Global Trader – Merchant Exporter (Aluminium A7, Copper Cathode, Millberry)</title>
-  <meta name="description" content="Hanok Global Trader: Merchant Exporter of Aluminium Ingots A7, Copper Cathode, and Copper Millberry. Bankable instruments, CIF/FOB, SGS/CIQ inspection, on-time logistics." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hanok Global Trader – Merchant Exporter</title>
+<meta name="description" content="Merchant exporter for Aluminium Ingots A7, Copper Cathode, and Copper Millberry. CIF/FOB, SGS/CIQ, compliant documentation, fast logistics." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --ink:#0b1320; --muted:#667085;
+  --primary:#1E73FF; --primary-2:#0B5CF0; --soft:#F5F8FF;
+  --line:#EAECF0; --card:#ffffff;
+  --radius:16px;
+}
+*{box-sizing:border-box} html,body{margin:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--primary);text-decoration:none}
+.container{width:min(1120px,92vw);margin:auto}
+
+/* Navbar */
+.navbar{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+.navbar .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.brand{display:flex;gap:10px;align-items:center}
+.brand img{width:36px;height:36px;border-radius:999px}
+.brand .title{font-weight:800}
+.nav{display:flex;gap:22px;align-items:center}
+.nav a{color:#475467}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:600;border:1px solid var(--primary);color:#fff;background:var(--primary)}
+.btn.outline{background:#fff;color:var(--primary)}
+.menu{display:none;border:0;background:#fff;font-size:22px}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,#fff 0%, var(--soft) 100%); border-bottom:1px solid var(--line)}
+.hero .row{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding:40px 0}
+.hero h1{font-size:42px;line-height:1.15;margin:0 0 12px}
+.hero p{color:var(--muted);margin:0 0 18px}
+.cta{display:flex;gap:12px}
+.badges{display:flex;gap:16px;color:#475467;font-size:14px;margin-top:12px}
+.hero .media{position:relative}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;position:absolute;left:12px;right:12px;bottom:12px}
+.stat{background:#ffffffd9;border:1px solid var(--line);backdrop-filter:saturate(180%) blur(6px);border-radius:12px;padding:10px;text-align:center}
+.stat b{display:block;font-size:18px}
+
+/* Sections */
+.section{padding:64px 0}
+.section h2{font-size:28px;margin:0 0 10px}
+.lead{color:var(--muted);margin:0 0 22px}
+
+/* Cards */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.icon{font-size:26px}
+.pill{display:inline-block;background:#EAF1FF;color:var(--primary);padding:6px 10px;border-radius:999px;font-size:12px;margin:8px 0}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:20px}
+input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);font:inherit}
+input:focus,textarea:focus{outline:2px solid #C9DAFF}
+
+/* Footer */
+.footer{border-top:1px solid var(--line);background:#fff}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:24px 0}
+.links{display:flex;gap:16px;flex-wrap:wrap}
+.muted{color:#98A2B3}
+
+/* Responsive */
+@media (max-width:1000px){
+  .nav{display:none;position:absolute;right:16px;top:66px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;flex-direction:column}
+  .menu{display:block}
+  .hero .row,.contact{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .grid-4{grid-template-columns:1fr 1fr}
+}
+</style>
 </head>
 <body>
-  <!-- Top Bar -->
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="#">
-        <img src="https://picsum.photos/seed/hgtlogo/72/72" alt="" class="brand-mark" />
-        <div class="brand-text">
-          <span class="brand-name">Hanok Global Trader</span>
-          <span class="brand-tag">INTERNATIONAL COMMODITIES</span>
-        </div>
-      </a>
 
-      <nav id="nav" class="nav">
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a class="btn btn-primary" href="#contact">Contact</a>
-      </nav>
+<!-- NAV -->
+<header class="navbar">
+  <div class="container row">
+    <a class="brand" href="#">
+      <img src="https://picsum.photos/seed/hgt/72/72" alt="">
+      <div>
+        <div class="title">Hanok Global Trader</div>
+        <small class="muted">INTERNATIONAL COMMODITIES</small>
+      </div>
+    </a>
+    <nav id="nav" class="nav">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#services">Services</a>
+      <a class="btn outline" href="#contact">Contact</a>
+    </nav>
+    <button id="menu" class="menu">☰</button>
+  </div>
+</header>
 
-      <button id="menuBtn" aria-label="Open menu" class="menu-btn">
-        <span></span><span></span><span></span>
-      </button>
+<!-- HERO -->
+<section class="hero">
+  <div class="container row">
+    <div>
+      <h1>Global Excellence in <span style="color:var(--primary)">Metal Trading</span></h1>
+      <p>Your trusted partner for premium <b>Aluminium A7</b>, <b>Copper Cathode</b>, and <b>Copper Millberry</b> with full documentation, bankable instruments, and on-time logistics.</p>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/918328933184" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a class="btn outline" href="#contact">Request SCO</a>
+      </div>
+      <div class="badges"><span>✓ CIF &amp; FOB</span><span>✓ SGS / CIQ</span><span>✓ NCNDA &amp; Contracts</span></div>
     </div>
-  </header>
+    <div class="media">
+      <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=1400&auto=format&fit=crop" alt="" style="border-radius:16px;border:1px solid var(--line)">
+      <div class="stats">
+        <div class="stat"><b>50+</b><small>Global Partners</small></div>
+        <div class="stat"><b>10K+</b><small>MT / year</small></div>
+        <div class="stat"><b>99%</b><small>Satisfaction</small></div>
+        <div class="stat"><b>24/7</b><small>Support</small></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Global Excellence in <span class="accent">Metal Trading</span></h1>
-        <p>
-          Your trusted partner for premium <strong>Aluminium A7</strong>, <strong>Copper Cathode</strong>,
-          and <strong>Copper Millberry</strong> with full documentation, bankable instruments, and on-time logistics.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="https://wa.me/918328933184" target="_blank" rel="noopener">WhatsApp Us</a>
-          <a class="btn btn-outline" href="#contact">Request SCO</a>
-        </div>
-        <ul class="ticks">
-          <li>✔ CIF &amp; FOB</li>
-          <li>✔ SGS / CIQ</li>
-          <li>✔ NCNDA &amp; Contracts</li>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>Leading International Commodity Trader</h2>
+    <p class="lead">We connect serious buyers with certified producers across the globe with transparent procedures and superior service.</p>
+    <div class="grid-3">
+      <div class="card"><div class="icon">🌍</div><h3>Global Network</h3><p>Direct mill & smelter relationships across 6+ continents.</p></div>
+      <div class="card"><div class="icon">✅</div><h3>Certified Quality</h3><p>SGS/CIQ inspected products with full documentation & certifications.</p></div>
+      <div class="card"><div class="icon">🚢</div><h3>Fast Delivery</h3><p>Efficient CIF/FOB delivery with coordinated logistics.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <h2>Our Premium Products</h2>
+    <p class="lead">High-quality metals for your business needs.</p>
+
+    <div class="grid-3">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1504280390368-3971dc332da3?q=80&w=1200&auto=format&fit=crop" alt="" style="border-radius:12px;margin-bottom:10px">
+        <span class="pill">Aluminium</span>
+        <h3>Aluminium Ingots A7</h3>
+        <ul>
+          <li>Purity: <b>99.70% min (A7)</b></li>
+          <li>Packing: Strapped on pallets</li>
+          <li>Inspection: SGS / CIQ</li>
         </ul>
+        <a class="btn" href="#contact">Get SCO</a>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581094375291-c6a5d8a04a6b?q=80&w=1200&auto=format&fit=crop" alt="" style="border-radius:12px;margin-bottom:10px">
+        <span class="pill">Copper</span>
+        <h3>Copper Cathode</h3>
+        <ul>
+          <li>Purity: <b>99.99% Cu</b></li>
+          <li>Docs: COA, CQ, BL, Invoice, Packing list</li>
+          <li>Dimensions: Standard sheets</li>
+        </ul>
+        <a class="btn" href="#contact">Get SCO</a>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?q=80&w=1200&auto=format&fit=crop" alt="" style="border-radius:12px;margin-bottom:10px">
+        <span class="pill">Copper</span>
+        <h3>Copper Millberry Scrap</h3>
+        <ul>
+          <li>Purity: <b>99.95%+</b>, bright & clean wire</li>
+          <li>No coatings, free of impurities</li>
+          <li>Inspection: SGS / CIQ</li>
+        </ul>
+        <a class="btn" href="#contact">Get SCO</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="grid-3">
+      <div class="card"><h3>Trade Workflow</h3><p>LOI → KYC/CIS → NCNDA → SCO/ICPO → Contract → DLC/SBLC → Inspection → Shipment.</p></div>
+      <div class="card"><h3>Payments</h3><p>Bankable instruments (DLC/SBLC/TT). Escrow & partial shipments available by contract.</p></div>
+      <div class="card"><h3>Logistics</h3><p>End-to-end freight with CIF/FOB terms and port handling coordinated to schedule.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL PRESENCE -->
+<section class="section" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2>Global Presence & Reach</h2>
+        <p class="lead">Exports to USA, UK, Australia, Europe, Canada, UAE & more with trusted partners and reliable trade solutions.</p>
+        <a class="btn outline" href="#contact">Contact Us to Start Trading</a>
       </div>
-      <div class="hero-media">
-        <img src="https://picsum.photos/seed/ship/900/600" alt="Global shipping" />
-        <div class="stats">
-          <div><strong>50+</strong><span>Global Partners</span></div>
-          <div><strong>10K+</strong><span>MT Traded Annually</span></div>
-          <div><strong>99%</strong><span>Client Satisfaction</span></div>
-          <div><strong>24/7</strong><span>Support</span></div>
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop" alt="" style="border-radius:16px;border:1px solid var(--line)">
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section">
+  <div class="container">
+    <h2>What Our Clients Say</h2>
+    <div class="card"><p>“Reliable export partner! Timely deliveries and outstanding product quality.”</p><small class="muted">— Distributor, Europe</small></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <h2>Let’s Grow Together!</h2>
+    <div class="contact">
+      <div class="grid-3" style="grid-template-columns:1fr;gap:14px">
+        <div class="card"><h3>Contact Number</h3><p>+91 770 231 0750</p></div>
+        <div class="card"><h3>Email</h3><p><a href="mailto:info@hanokglobal.com">info@hanokglobal.com</a></p></div>
+        <div class="card"><h3>Location</h3><p>Kurnool, Andhra Pradesh, India</p></div>
+      </div>
+      <form class="card" onsubmit="return submitForm(event)">
+        <div class="grid-2">
+          <input name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
         </div>
-      </div>
+        <input name="phone" placeholder="Phone" required>
+        <textarea name="message" rows="5" placeholder="Message..." required></textarea>
+        <button class="btn" type="submit">Submit Message</button>
+        <p id="msg" class="muted" style="margin:6px 0 0"></p>
+        <small class="muted">Urgent? WhatsApp <a href="https://wa.me/917702310750" target="_blank" rel="noopener">+91 8328933184</a></small>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">Leading International Commodity Trader</h2>
-      <p class="section-lead">
-        We connect serious buyers with certified producers across the globe with transparent procedures and superior service.
-      </p>
-
-      <div class="cards grid-3">
-        <div class="card">
-          <div class="icon">🌐</div>
-          <h3>Global Network</h3>
-          <p>Direct mill &amp; smelter relationships across 6+ continents.</p>
-        </div>
-        <div class="card">
-          <div class="icon">✅</div>
-          <h3>Certified Quality</h3>
-          <p>SGS/CIQ inspected products with full documentation &amp; certifications.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🚚</div>
-          <h3>Fast Delivery</h3>
-          <p>Efficient CIF/FOB delivery with coordinated logistics.</p>
-        </div>
-      </div>
+<!-- CERTS -->
+<section class="section">
+  <div class="container">
+    <h2>Certifications & Compliance</h2>
+    <div class="grid-4">
+      <div class="card" style="text-align:center">ISO Certified</div>
+      <div class="card" style="text-align:center">FSSAI Approved</div>
+      <div class="card" style="text-align:center">FDA Compliant</div>
+      <div class="card" style="text-align:center">Customs & Trade Regulations Adhered</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Products -->
-  <section id="products" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Our Premium Products</h2>
-      <p class="section-lead">High-quality metals for your business needs.</p>
-
-      <div class="cards grid-3">
-        <article class="product card">
-          <img src="https://picsum.photos/seed/aluminium/720/480" alt="Aluminium Ingots A7" />
-          <div class="card-body">
-            <span class="pill">Aluminium</span>
-            <h3>Aluminium Ingots A7</h3>
-            <ul class="bullets">
-              <li>Purity: <strong>99.70% min (A7)</strong></li>
-              <li>Packing: Strapped on pallets</li>
-              <li>Inspection: SGS / CIQ</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact">Get SCO</a>
-          </div>
-        </article>
-
-        <article class="product card">
-          <img src="https://picsum.photos/seed/coppercathode/720/480" alt="Copper Cathode" />
-          <div class="card-body">
-            <span class="pill">Copper</span>
-            <h3>Copper Cathode</h3>
-            <ul class="bullets">
-              <li>Purity: <strong>99.99% Cu</strong></li>
-              <li>Docs: COA, CQ, BL, Invoice, Packing list</li>
-              <li>Dimensions: Standard sheets</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact">Get SCO</a>
-          </div>
-        </article>
-
-        <article class="product card">
-          <img src="https://picsum.photos/seed/millberry/720/480" alt="Copper Millberry Scrap" />
-          <div class="card-body">
-            <span class="pill">Copper</span>
-            <h3>Copper Millberry Scrap</h3>
-            <ul class="bullets">
-              <li>Purity: <strong>99.95%+</strong>, bright &amp; clean wire</li>
-              <li>No coatings, free of impurities</li>
-              <li>Inspection: SGS / CIQ</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact">Get SCO</a>
-          </div>
-        </article>
-      </div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container foot">
+    <div>
+      <strong>Hanok Global Trader</strong><br>
+      <span class="muted">© <span id="year"></span> Hanok Global Trader. All rights reserved.</span>
     </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="container">
-      <h2 class="section-title">Services</h2>
-      <div class="cards grid-3">
-        <div class="card">
-          <h3>Trade Workflow</h3>
-          <p>LOI → KYC/CIS → NCNDA → SCO/ICPO → Contract → DLC/SBLC → Inspection → Shipment.</p>
-        </div>
-        <div class="card">
-          <h3>Payments</h3>
-          <p>Bankable instruments (DLC/SBLC/TT). Escrow &amp; partial shipments available by contract.</p>
-        </div>
-        <div class="card">
-          <h3>Logistics</h3>
-          <p>End-to-end freight with CIF/FOB terms and port handling coordinated to schedule.</p>
-        </div>
-      </div>
+    <div class="links">
+      <a href="#">Home</a><a href="#about">About</a><a href="#products">Products</a>
+      <a href="#services">Services</a><a href="#contact">Contact</a>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- Global Presence -->
-  <section class="section gradient">
-    <div class="container gp">
-      <div class="gp-text">
-        <h2 class="section-title">Global Presence &amp; Reach</h2>
-        <p>Connecting India to the World. Exports to USA, UK, Australia, Europe, Canada, UAE &amp; more.</p>
-        <a class="btn btn-outline invert" href="#contact">Contact Us to Start Trading</a>
-      </div>
-      <div class="gp-media">
-        <img src="https://picsum.photos/seed/global/820/520" alt="Global Reach" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section alt">
-    <div class="container">
-      <h2 class="section-title">What Our Clients Say</h2>
-      <div class="testimonial">
-        <p>“Reliable export partner! Timely deliveries and outstanding product quality.”</p>
-        <div class="who">— Distributor, Europe</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Let’s Grow Together!</h2>
-      <div class="contact-grid">
-        <div class="contact-cards">
-          <div class="card">
-            <h3>Contact Number</h3>
-            <p>+91 770 231 0750</p>
-          </div>
-          <div class="card">
-            <h3>Email</h3>
-            <p><a href="mailto:info@hanokglobaltrader.com">info@hanokglobaltrader.com</a></p>
-          </div>
-          <div class="card">
-            <h3>Location</h3>
-            <p>Kurnool, Andhra Pradesh, India</p>
-          </div>
-        </div>
-
-        <form class="contact-form" onsubmit="return submitForm(event)">
-          <div class="grid-2">
-            <input required name="name" placeholder="Your Name" />
-            <input required type="email" name="email" placeholder="Your Email" />
-          </div>
-          <input required name="phone" placeholder="Phone" />
-          <textarea required name="message" rows="5" placeholder="Message..."></textarea>
-          <button class="btn btn-primary" type="submit">Submit Message</button>
-          <p id="formMsg" class="form-msg" role="status"></p>
-          <p class="small">Urgent Requirement? WhatsApp <a href="https://wa.me/917702310750" target="_blank" rel="noopener">+91 8328933184</a></p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications -->
-  <section class="section gradient soft">
-    <div class="container certs">
-      <h2 class="section-title">Certifications &amp; Compliance</h2>
-      <div class="cards grid-4">
-        <div class="card center">ISO Certified</div>
-        <div class="card center">FSSAI Approved</div>
-        <div class="card center">FDA Compliant</div>
-        <div class="card center">Customs &amp; Trade Regulations Adhered</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="foot-brand">
-        <div class="brand-name">Hanok Global Trader</div>
-        <div class="muted">© <span id="year"></span> Hanok Global Trader. All rights reserved.</div>
-      </div>
-      <div class="foot-links">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('menu').addEventListener('click',()=> {
+  const n=document.getElementById('nav'); n.style.display=n.style.display==='flex'?'none':'flex';
+});
+function submitForm(e){e.preventDefault();document.getElementById('msg').textContent="Thanks! We’ll reply within 24 hours."; e.target.reset();return false;}
+</script>
 </body>
 </html>
