@@ -1,10 +1,12 @@
 // Mobile menu toggle
-const btn = document.getElementById('menuBtn');
-const menu = document.getElementById('menu');
-if (btn && menu) {
-  btn.addEventListener('click', () => menu.classList.toggle('show'));
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
 }
 
-// Footer year
-const y = document.getElementById('year');
-if (y) y.textContent = new Date().getFullYear();
+// Current year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
